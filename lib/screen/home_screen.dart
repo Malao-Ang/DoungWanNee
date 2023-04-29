@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucky_with_you/widgets/newFeture.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Color.fromARGB(200, 186, 144, 198),
           ],
         )),
-        padding: EdgeInsets.only(top: 70.0, left: 15.0),
+        padding: EdgeInsets.only(top: 70.0, left: 15.0, right: 15.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
             "Hello",
@@ -44,7 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
             "Have a good day",
             style: GoogleFonts.libreBaskerville(
                 textStyle: TextStyle(fontSize: 20, color: Colors.white)),
-          )
+          ),
+          Gap(20),
+          NewFeatureCard()
         ]),
       ),
     );

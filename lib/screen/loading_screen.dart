@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:lucky_with_you/main.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
+import 'package:lucky_with_you/widgets/navigationBar.dart';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({super.key});
@@ -25,7 +26,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     Future.delayed(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const HomeScreen())));
+            MaterialPageRoute(builder: (context) => const BottomNavigation())));
   }
 
   @override

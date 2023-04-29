@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
 import 'package:lucky_with_you/screen/loading_screen.dart';
+import 'package:lucky_with_you/widgets/navigationBar.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: HomeScreen()),
+      home: BottomNavigation(),
     );
   }
 }

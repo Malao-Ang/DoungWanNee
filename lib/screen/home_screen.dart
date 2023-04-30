@@ -64,15 +64,16 @@ class _HomeScreenState extends State<HomeScreen> {
             Center(child: NewFeatureCard()),
             Gap(15),
             Container(
-              padding: EdgeInsets.only(bottom: 10.0),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 25, bottom: 15),
                 child: Row(
                   children: [
-                    CardCategory(),
-                    CardCategory(),
-                    CardCategory(),
+                    CardCategory(
+                      title: 'Love',
+                      assets: 'heart',
+                    ),
+                    CardCategory(title: 'Finance', assets: 'money'),
                   ],
                 ),
               ),

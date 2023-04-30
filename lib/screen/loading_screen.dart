@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:lucky_with_you/main.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
+import 'package:lucky_with_you/util/app_layout.dart';
 import 'package:lucky_with_you/widgets/navigationBar.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -47,7 +48,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Image.asset(
               'assets/start_splash.png',
-              height: 180,
+              height: AppLayout.getHight(180),
             ),
             const Gap(15),
             Row(

@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
               width: double.maxFinite,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,12 +68,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.only(left: 25, bottom: 15),
                 child: Row(
-                  children: [
+                  children: const [
                     CardCategory(
                       title: 'Love',
                       assets: 'heart',
                     ),
+                    CardCategory(title: 'LUCK', assets: 'carender'),
                     CardCategory(title: 'Finance', assets: 'money'),
+                    CardCategory(title: 'Health', assets: 'health'),
+                    CardCategory(title: 'Study', assets: 'book'),
                   ],
                 ),
               ),

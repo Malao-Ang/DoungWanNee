@@ -6,6 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
 import 'package:lucky_with_you/widgets/cardtype.dart';
 import 'package:lucky_with_you/widgets/newFeture.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/state.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,6 +20,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    var name = context.watch<Luck>().name;
+
     return Scaffold(
       body: ListView(children: [
         Container(
@@ -47,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Gap(5),
                   Text(
-                    "Kaewmanee",
+                    name,
                     style: GoogleFonts.libreBaskerville(
                         textStyle:
                             TextStyle(fontSize: 35, color: Colors.white)),

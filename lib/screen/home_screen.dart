@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucky_with_you/util/app_layout.dart';
 import 'package:lucky_with_you/widgets/cardtype.dart';
 import 'package:lucky_with_you/widgets/newFeture.dart';
 
@@ -19,7 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: ListView(children: [
         Container(
-          width: double.infinity,
+          height: AppLayout.getScreenHeight(),
+          width: AppLayout.getScreenWidth(),
           decoration: const BoxDecoration(
               gradient: LinearGradient(
             begin: Alignment.topCenter,

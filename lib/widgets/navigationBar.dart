@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucky_with_you/screen/account_screen.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -17,7 +18,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   static final List<Widget> _widgetOptions = <Widget>[
     Text("Predicted"),
     HomeScreen(),
-    Text("Account"),
+    AccountScreen(),
   ];
   void _onItemTapped(int index) {
     setState(() {

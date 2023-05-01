@@ -12,7 +12,7 @@ class RandomCardScreen extends StatelessWidget {
         children: [
           Container(
             // iphone1416wq (13:94)
-            padding: EdgeInsets.fromLTRB(46, 46, 44, 139),
+            padding: EdgeInsets.fromLTRB(46, 46, 44, 100),
             width: double.infinity,
             decoration: BoxDecoration(
               gradient: RadialGradient(
@@ -28,9 +28,9 @@ class RandomCardScreen extends StatelessWidget {
                 Center(
                   // pickonecard6qM (13:236)
                   child: Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 2, 51),
+                    margin: EdgeInsets.fromLTRB(0, 0, 2, 20),
                     child: Text(
-                      'PICK ONE CARD',
+                      'PICK A CARD',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 40,
@@ -65,9 +65,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("Clicked1");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -79,9 +84,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click2");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -93,9 +103,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click3");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -107,9 +122,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click4");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -121,9 +141,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click5");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -135,9 +160,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click6");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -149,9 +179,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click7");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -163,9 +198,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click8");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -177,9 +217,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click9");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -204,9 +249,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click10");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -218,9 +268,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click11");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -232,9 +287,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click12");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -246,9 +306,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click13");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -260,9 +325,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click14");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -274,9 +344,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click15");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -288,9 +363,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click16");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -302,9 +382,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click17");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -316,9 +401,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click18");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -343,9 +433,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click19 ");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -357,9 +452,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click20");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -371,9 +471,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click21");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -385,9 +490,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click22");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -399,9 +509,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click23");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -413,9 +528,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click24");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -427,9 +547,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click25");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -441,9 +566,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click26");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -455,9 +585,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click27");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -482,9 +617,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click28");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -496,9 +636,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click29");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -510,9 +655,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click30");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -524,9 +674,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
+                                      child: InkWell(
+                                        onTap: () {
+                                          print("click31");
+                                        },
+                                        child: Image.asset(
+                                          'assets/card.png',
+                                          fit: BoxFit.cover,
+                                        ),
                                       )),
                                 ),
                               ),
@@ -538,10 +693,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click32");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -552,10 +711,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click33");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -566,10 +729,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click34");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -580,10 +747,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click35");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -594,10 +765,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click36");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                             ],
@@ -621,10 +796,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click37");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -635,10 +814,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click38");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -649,10 +832,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click39");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -663,10 +850,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click40");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -677,10 +868,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click41");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -691,10 +886,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click42");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -705,10 +904,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click43");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -719,10 +922,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click44");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -733,10 +940,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click45");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                             ],
@@ -760,10 +971,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click46");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -774,10 +989,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click47");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -788,10 +1007,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click48");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -802,10 +1025,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click49");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -816,10 +1043,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click50");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -827,42 +1058,54 @@ class RandomCardScreen extends StatelessWidget {
                                 left: 140,
                                 top: 0,
                                 child: Align(
-                                  child: SizedBox(
-                                      width: 56,
-                                      height: 84,
+                                    child: SizedBox(
+                                  width: 56,
+                                  height: 84,
+                                  child: InkWell(
+                                      onTap: () {
+                                        print("click51");
+                                      },
                                       child: Image.asset(
                                         'assets/card.png',
                                         fit: BoxFit.cover,
                                       )),
-                                ),
+                                )),
                               ),
                               Positioned(
                                 // card7Ws1 (56:407)
                                 left: 168,
                                 top: 0,
                                 child: Align(
-                                  child: SizedBox(
-                                      width: 56,
-                                      height: 84,
+                                    child: SizedBox(
+                                  width: 56,
+                                  height: 84,
+                                  child: InkWell(
+                                      onTap: () {
+                                        print("click52");
+                                      },
                                       child: Image.asset(
                                         'assets/card.png',
                                         fit: BoxFit.cover,
                                       )),
-                                ),
+                                )),
                               ),
                               Positioned(
                                 // card8rR5 (56:408)
                                 left: 196,
                                 top: 0,
                                 child: Align(
-                                  child: SizedBox(
-                                      width: 56,
-                                      height: 84,
+                                    child: SizedBox(
+                                  width: 56,
+                                  height: 84,
+                                  child: InkWell(
+                                      onTap: () {
+                                        print("click53");
+                                      },
                                       child: Image.asset(
                                         'assets/card.png',
                                         fit: BoxFit.cover,
                                       )),
-                                ),
+                                )),
                               ),
                               Positioned(
                                 // card9a6B (56:409)
@@ -872,10 +1115,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click54");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                             ],
@@ -899,10 +1146,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click55");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -913,10 +1164,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click56");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -927,10 +1182,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click57");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -938,28 +1197,36 @@ class RandomCardScreen extends StatelessWidget {
                                 left: 84,
                                 top: 0,
                                 child: Align(
-                                  child: SizedBox(
-                                      width: 56,
-                                      height: 84,
+                                    child: SizedBox(
+                                  width: 56,
+                                  height: 84,
+                                  child: InkWell(
+                                      onTap: () {
+                                        print("click58");
+                                      },
                                       child: Image.asset(
                                         'assets/card.png',
                                         fit: BoxFit.cover,
                                       )),
-                                ),
+                                )),
                               ),
                               Positioned(
                                 // card5M8s (56:415)
                                 left: 112,
                                 top: 0,
                                 child: Align(
-                                  child: SizedBox(
-                                      width: 56,
-                                      height: 84,
+                                    child: SizedBox(
+                                  width: 56,
+                                  height: 84,
+                                  child: InkWell(
+                                      onTap: () {
+                                        print("click59");
+                                      },
                                       child: Image.asset(
                                         'assets/card.png',
                                         fit: BoxFit.cover,
                                       )),
-                                ),
+                                )),
                               ),
                               Positioned(
                                 // card6ffM (56:416)
@@ -969,10 +1236,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click60");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -983,10 +1254,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click61");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -997,10 +1272,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click62");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1008,14 +1287,18 @@ class RandomCardScreen extends StatelessWidget {
                                 left: 224,
                                 top: 0,
                                 child: Align(
-                                  child: SizedBox(
-                                      width: 56,
-                                      height: 84,
+                                    child: SizedBox(
+                                  width: 56,
+                                  height: 84,
+                                  child: InkWell(
+                                      onTap: () {
+                                        print("click63");
+                                      },
                                       child: Image.asset(
                                         'assets/card.png',
                                         fit: BoxFit.cover,
                                       )),
-                                ),
+                                )),
                               ),
                             ],
                           ),
@@ -1038,10 +1321,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click64");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1052,10 +1339,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click65");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1066,10 +1357,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click66");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1080,10 +1375,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click67");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1094,10 +1393,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click68");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1108,10 +1411,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click69");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1122,10 +1429,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click70");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1136,10 +1447,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click71");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1150,10 +1465,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click72");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                             ],
@@ -1177,10 +1496,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click73");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1191,10 +1514,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click74");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1205,10 +1532,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click75");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1219,10 +1550,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click76");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1233,10 +1568,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click77");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                               Positioned(
@@ -1247,10 +1586,14 @@ class RandomCardScreen extends StatelessWidget {
                                   child: SizedBox(
                                       width: 56,
                                       height: 84,
-                                      child: Image.asset(
-                                        'assets/card.png',
-                                        fit: BoxFit.cover,
-                                      )),
+                                      child: InkWell(
+                                          onTap: () {
+                                            print("click78");
+                                          },
+                                          child: Image.asset(
+                                            'assets/card.png',
+                                            fit: BoxFit.cover,
+                                          ))),
                                 ),
                               ),
                             ],
@@ -1294,15 +1637,15 @@ class RandomCardScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         // submitppP (13:238)
-                        left: 111.5,
-                        top: 11.5,
+                        left: 100.5,
+                        top: 5.5,
                         child: Center(
                           child: Align(
                             child: SizedBox(
-                              width: 77,
-                              height: 50,
+                              width: 100,
+                              height: 40,
                               child: Text(
                                 'SUBMIT',
                                 textAlign: TextAlign.center,

@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Gap(20),
             Center(child: NewFeatureCard()),
-            Gap(15),
+            Gap(25),
             Container(
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,

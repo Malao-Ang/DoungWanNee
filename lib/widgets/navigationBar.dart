@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucky_with_you/providers/state.dart';
 import 'package:lucky_with_you/screen/account_screen.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
 import 'package:lucky_with_you/screen/randomcard_screen.dart';
+import 'package:provider/provider.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -16,6 +18,7 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 1;
+
   static final List<Widget> _widgetOptions = <Widget>[
     RandomCardScreen(),
     HomeScreen(),
@@ -45,9 +48,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
             unselectedItemColor: const Color(0xFF526480),
             items: const [
               BottomNavigationBarItem(
-                  icon: Icon(FluentIcons.star_12_regular),
-                  activeIcon: Icon(FluentIcons.star_12_filled),
-                  label: 'Predicted'),
+                icon: Icon(FluentIcons.star_12_regular),
+                activeIcon: Icon(FluentIcons.star_12_filled),
+                label: 'Predicted',
+              ),
               BottomNavigationBarItem(
                   icon: Icon(FluentIcons.home_12_regular),
                   activeIcon: Icon(FluentIcons.home_12_filled),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:lucky_with_you/providers/state.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
 import 'package:lucky_with_you/screen/loading_screen.dart';
 import 'package:lucky_with_you/widgets/navigationBar.dart';
@@ -7,7 +8,12 @@ import 'package:provider/provider.dart';
 
 Future<void> main(String) async {
   runApp(
-    const MyApp(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => Prediction()),
+      ],
+      child: MyApp(),
+    ),
   );
 }
 

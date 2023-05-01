@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:lucky_with_you/data/Card.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/state.dart';
 
 class RandomCardScreen extends StatelessWidget {
   const RandomCardScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
+    final prediction = context.read<Prediction>();
+    prediction.shuffle();
+    var _deckCard = context.read<Prediction>().deckCard;
     return Scaffold(
       body: ListView(
         children: [
@@ -67,7 +73,8 @@ class RandomCardScreen extends StatelessWidget {
                                       height: 84,
                                       child: InkWell(
                                         onTap: () {
-                                          print("Clicked1");
+                                          print("click1");
+                                          print(_deckCard[1].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -87,6 +94,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click2");
+                                          print(_deckCard[2].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -106,6 +114,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click3");
+                                          print(_deckCard[3].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -125,6 +134,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click4");
+                                          print(_deckCard[4].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -144,6 +154,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click5");
+                                          print(_deckCard[5].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -163,6 +174,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click6");
+                                          print(_deckCard[6].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -182,6 +194,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click7");
+                                          print(_deckCard[7].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -201,6 +214,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click8");
+                                          print(_deckCard[8].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -220,6 +234,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click9");
+                                          print(_deckCard[9].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -252,6 +267,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click10");
+                                          print(_deckCard[10].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -271,6 +287,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click11");
+                                          print(_deckCard[11].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -290,6 +307,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click12");
+                                          print(_deckCard[12].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -309,6 +327,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click13");
+                                          print(_deckCard[13].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -328,6 +347,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click14");
+                                          print(_deckCard[14].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -347,6 +367,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click15");
+                                          print(_deckCard[15].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -366,6 +387,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click16");
+                                          print(_deckCard[16].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -385,6 +407,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click17");
+                                          print(_deckCard[17].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -404,6 +427,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click18");
+                                          print(_deckCard[18].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -436,6 +460,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click19 ");
+                                          print(_deckCard[19].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -455,6 +480,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click20");
+                                          print(_deckCard[20].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -474,6 +500,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click21");
+                                          print(_deckCard[21].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -493,6 +520,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click22");
+                                          print(_deckCard[22].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -512,6 +540,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click23");
+                                          print(_deckCard[23].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -531,6 +560,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click24");
+                                          print(_deckCard[24].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -550,6 +580,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click25");
+                                          print(_deckCard[25].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -569,6 +600,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click26");
+                                          print(_deckCard[26].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -588,6 +620,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click27");
+                                          print(_deckCard[27].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -620,6 +653,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click28");
+                                          print(_deckCard[28].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -639,6 +673,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click29");
+                                          print(_deckCard[29].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -658,6 +693,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click30");
+                                          print(_deckCard[30].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -677,6 +713,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                         onTap: () {
                                           print("click31");
+                                          print(_deckCard[31].name);
                                         },
                                         child: Image.asset(
                                           'assets/card.png',
@@ -696,6 +733,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click32");
+                                            print(_deckCard[32].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -714,6 +752,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click33");
+                                            print(_deckCard[33].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -732,6 +771,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click34");
+                                            print(_deckCard[34].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -750,6 +790,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click35");
+                                            print(_deckCard[35].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -768,6 +809,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click36");
+                                            print(_deckCard[36].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -799,6 +841,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click37");
+                                            print(_deckCard[37].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -817,6 +860,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click38");
+                                            print(_deckCard[38].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -835,6 +879,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click39");
+                                            print(_deckCard[39].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -853,6 +898,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click40");
+                                            print(_deckCard[40].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -871,6 +917,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click41");
+                                            print(_deckCard[41].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -889,6 +936,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click42");
+                                            print(_deckCard[42].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -907,6 +955,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click43");
+                                            print(_deckCard[43].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -925,6 +974,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click44");
+                                            print(_deckCard[44].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -943,6 +993,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click45");
+                                            print(_deckCard[45].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -974,6 +1025,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click46");
+                                            print(_deckCard[46].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -992,6 +1044,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click47");
+                                            print(_deckCard[47].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1010,6 +1063,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click48");
+                                            print(_deckCard[48].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1028,6 +1082,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click49");
+                                            print(_deckCard[49].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1046,6 +1101,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click50");
+                                            print(_deckCard[50].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1064,6 +1120,7 @@ class RandomCardScreen extends StatelessWidget {
                                   child: InkWell(
                                       onTap: () {
                                         print("click51");
+                                        print(_deckCard[51].name);
                                       },
                                       child: Image.asset(
                                         'assets/card.png',
@@ -1082,6 +1139,7 @@ class RandomCardScreen extends StatelessWidget {
                                   child: InkWell(
                                       onTap: () {
                                         print("click52");
+                                        print(_deckCard[52].name);
                                       },
                                       child: Image.asset(
                                         'assets/card.png',
@@ -1100,6 +1158,7 @@ class RandomCardScreen extends StatelessWidget {
                                   child: InkWell(
                                       onTap: () {
                                         print("click53");
+                                        print(_deckCard[53].name);
                                       },
                                       child: Image.asset(
                                         'assets/card.png',
@@ -1118,6 +1177,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click54");
+                                            print(_deckCard[54].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1149,6 +1209,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click55");
+                                            print(_deckCard[55].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1167,6 +1228,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click56");
+                                            print(_deckCard[56].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1185,6 +1247,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click57");
+                                            print(_deckCard[57].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1203,6 +1266,7 @@ class RandomCardScreen extends StatelessWidget {
                                   child: InkWell(
                                       onTap: () {
                                         print("click58");
+                                        print(_deckCard[58].name);
                                       },
                                       child: Image.asset(
                                         'assets/card.png',
@@ -1221,6 +1285,7 @@ class RandomCardScreen extends StatelessWidget {
                                   child: InkWell(
                                       onTap: () {
                                         print("click59");
+                                        print(_deckCard[59].name);
                                       },
                                       child: Image.asset(
                                         'assets/card.png',
@@ -1239,6 +1304,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click60");
+                                            print(_deckCard[60].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1257,6 +1323,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click61");
+                                            print(_deckCard[61].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1275,6 +1342,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click62");
+                                            print(_deckCard[62].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1293,6 +1361,7 @@ class RandomCardScreen extends StatelessWidget {
                                   child: InkWell(
                                       onTap: () {
                                         print("click63");
+                                        print(_deckCard[63].name);
                                       },
                                       child: Image.asset(
                                         'assets/card.png',
@@ -1324,6 +1393,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click64");
+                                            print(_deckCard[64].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1342,6 +1412,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click65");
+                                            print(_deckCard[65].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1360,6 +1431,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click66");
+                                            print(_deckCard[66].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1378,6 +1450,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click67");
+                                            print(_deckCard[67].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1396,6 +1469,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click68");
+                                            print(_deckCard[68].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1414,6 +1488,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click69");
+                                            print(_deckCard[69].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1432,6 +1507,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click70");
+                                            print(_deckCard[70].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1450,6 +1526,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click71");
+                                            print(_deckCard[71].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1468,6 +1545,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click72");
+                                            print(_deckCard[72].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1499,6 +1577,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click73");
+                                            print(_deckCard[73].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1517,6 +1596,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click74");
+                                            print(_deckCard[74].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1535,6 +1615,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click75");
+                                            print(_deckCard[75].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1553,6 +1634,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click76");
+                                            print(_deckCard[76].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1571,6 +1653,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click77");
+                                            print(_deckCard[77].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',
@@ -1589,6 +1672,7 @@ class RandomCardScreen extends StatelessWidget {
                                       child: InkWell(
                                           onTap: () {
                                             print("click78");
+                                            print(_deckCard[0].name);
                                           },
                                           child: Image.asset(
                                             'assets/card.png',

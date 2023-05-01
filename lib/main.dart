@@ -5,10 +5,10 @@ import 'package:lucky_with_you/screen/loading_screen.dart';
 import 'package:lucky_with_you/widgets/navigationBar.dart';
 import 'package:provider/provider.dart';
 
-import 'providers/state.dart';
-
 Future<void> main(String) async {
-  runApp(ChangeNotifierProvider(create: (_) => Luck(), child: MyApp()));
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {

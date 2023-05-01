@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lucky_with_you/screen/account_screen.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
+import 'package:lucky_with_you/screen/randomcard_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -16,7 +17,7 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 1;
   static final List<Widget> _widgetOptions = <Widget>[
-    Text("Predicted"),
+    RandomCardScreen(),
     HomeScreen(),
     AccountScreen(),
   ];

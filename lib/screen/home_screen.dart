@@ -8,8 +8,6 @@ import 'package:lucky_with_you/widgets/cardtype.dart';
 import 'package:lucky_with_you/widgets/newFeture.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/state.dart';
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -18,10 +16,34 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  late String _greetingMessage;
+
+  @override
+  void initState() {
+    super.initState();
+    _updateGreeting();
+  }
+
+  void _updateGreeting() {
+    final hour = DateTime.now().hour;
+
+    if (hour < 12) {
+      setState(() {
+        _greetingMessage = 'Good morning';
+      });
+    } else if (hour < 18) {
+      setState(() {
+        _greetingMessage = 'Good afternoon';
+      });
+    } else {
+      setState(() {
+        _greetingMessage = 'Good night';
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    var name = context.watch<Luck>().name;
-
     return Scaffold(
       body: ListView(children: [
         Container(
@@ -39,20 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+              padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
               width: double.maxFinite,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Hello",
-                    style: GoogleFonts.libreBaskerville(
-                        textStyle:
-                            TextStyle(fontSize: 35, color: Colors.white)),
-                  ),
-                  Gap(5),
-                  Text(
-                    name,
+                    '$_greetingMessage',
                     style: GoogleFonts.libreBaskerville(
                         textStyle:
                             TextStyle(fontSize: 35, color: Colors.white)),

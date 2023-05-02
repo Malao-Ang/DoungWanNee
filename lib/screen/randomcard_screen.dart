@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:lucky_with_you/data/Card.dart';
+import 'package:lucky_with_you/screen/ResultScreen.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/state.dart';
@@ -1825,23 +1826,34 @@ class RandomCardScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const Positioned(
-                          // submitppP (13:238)
-                          left: 100.5,
-                          top: 5.5,
-                          child: Center(
-                            child: Align(
-                              child: SizedBox(
-                                width: 100,
-                                height: 40,
-                                child: Text(
-                                  'SUBMIT',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w400,
-                                    height: 2.0525,
-                                    color: Color(0xffffffff),
+                        InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (ctx) => ResultScreen(
+                                      result: _deckCard[_selectedCard],
+                                      typeSelected: selectedType,
+                                    )
+                                // onToggleFavorites: onToggleFavorites,
+                                ));
+                          },
+                          child: const Positioned(
+                            // submitppP (13:238)
+                            left: 100.5,
+                            top: 5.5,
+                            child: Center(
+                              child: Align(
+                                child: SizedBox(
+                                  width: 100,
+                                  height: 40,
+                                  child: Text(
+                                    'SUBMIT',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w400,
+                                      height: 2.0525,
+                                      color: Color(0xffffffff),
+                                    ),
                                   ),
                                 ),
                               ),

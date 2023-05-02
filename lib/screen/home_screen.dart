@@ -100,10 +100,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     InkWell(
                       onTap: () {
-                        _selectedType = 'descriptionOfLove';
                         Navigator.of(context).push(MaterialPageRoute(
                             builder: (ctx) => RandomCardScreen(
-                                  selectedType: _selectedType,
+                                  selectedType: 'descriptionOfLove',
                                 )
                             // onToggleFavorites: onToggleFavorites,
                             ));
@@ -116,27 +115,49 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        _selectedType = 'descriptionOfLuck';
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => RandomCardScreen(
+                                  selectedType: 'descriptionOfLuck',
+                                )
+                            // onToggleFavorites: onToggleFavorites,
+                            ));
+
                         print(_selectedType);
                       },
                       child: CardCategory(title: 'LUCK', assets: 'carender'),
                     ),
                     InkWell(
                         onTap: () {
-                          _selectedType = 'descriptionOfFinance';
-                          print(_selectedType);
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => RandomCardScreen(
+                                    selectedType: 'descriptionOfFinance',
+                                  )
+                              // onToggleFavorites: onToggleFavorites,
+                              ));
                         },
                         child: CardCategory(title: 'Finance', assets: 'money')),
                     InkWell(
                         onTap: () {
-                          _selectedType = 'descriptionOfHealth';
-                          print(_selectedType);
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => RandomCardScreen(
+                                    selectedType: 'descriptionOfHealth',
+                                  )
+                              // onToggleFavorites: onToggleFavorites,
+                              ));
+                          // _selectedType = 'descriptionOfHealth';
+                          // print(_selectedType);
                         },
                         child: CardCategory(title: 'Health', assets: 'health')),
                     InkWell(
                         onTap: () {
-                          _selectedType = 'descriptionOfStudy';
-                          print(_selectedType);
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (ctx) => RandomCardScreen(
+                                    selectedType: 'descriptionOfStudy',
+                                  )
+                              // onToggleFavorites: onToggleFavorites,
+                              ));
+                          // _selectedType = 'descriptionOfStudy';
+                          // print(_selectedType);
                         },
                         child: CardCategory(title: 'Study', assets: 'book')),
                   ],

@@ -3,10 +3,13 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lucky_with_you/screen/randomcard_screen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
 import 'package:lucky_with_you/widgets/cardtype.dart';
 import 'package:lucky_with_you/widgets/newFeture.dart';
 import 'package:provider/provider.dart';
+
+import '../providers/state.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -44,6 +47,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final prediction = context.read<Prediction>();
+
+    var _selectedType = context.watch<Prediction>().typeToSee;
+
     return Scaffold(
       body: ListView(children: [
         Container(
@@ -90,15 +97,48 @@ class _HomeScreenState extends State<HomeScreen> {
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.only(left: 25, bottom: 15),
                 child: Row(
-                  children: const [
-                    CardCategory(
-                      title: 'Love',
-                      assets: 'heart',
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        _selectedType = 'descriptionOfLove';
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => RandomCardScreen(
+                                  selectedType: _selectedType,
+                                )
+                            // onToggleFavorites: onToggleFavorites,
+                            ));
+                        print(_selectedType);
+                      },
+                      child: CardCategory(
+                        title: 'Love',
+                        assets: 'heart',
+                      ),
                     ),
-                    CardCategory(title: 'LUCK', assets: 'carender'),
-                    CardCategory(title: 'Finance', assets: 'money'),
-                    CardCategory(title: 'Health', assets: 'health'),
-                    CardCategory(title: 'Study', assets: 'book'),
+                    InkWell(
+                      onTap: () {
+                        _selectedType = 'descriptionOfLuck';
+                        print(_selectedType);
+                      },
+                      child: CardCategory(title: 'LUCK', assets: 'carender'),
+                    ),
+                    InkWell(
+                        onTap: () {
+                          _selectedType = 'descriptionOfFinance';
+                          print(_selectedType);
+                        },
+                        child: CardCategory(title: 'Finance', assets: 'money')),
+                    InkWell(
+                        onTap: () {
+                          _selectedType = 'descriptionOfHealth';
+                          print(_selectedType);
+                        },
+                        child: CardCategory(title: 'Health', assets: 'health')),
+                    InkWell(
+                        onTap: () {
+                          _selectedType = 'descriptionOfStudy';
+                          print(_selectedType);
+                        },
+                        child: CardCategory(title: 'Study', assets: 'book')),
                   ],
                 ),
               ),

@@ -7,6 +7,8 @@ import '../data/CardList.dart';
 
 class Prediction with ChangeNotifier {
   List<TheCard> deckCard = cardsList;
+  int selectedIndex = 0;
+  String typeToSee = '';
 
   void shuffle() {
     final items = List<TheCard>.from(deckCard)..shuffle(Random());

@@ -20,7 +20,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 1;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    RandomCardScreen(),
+    RandomCardScreen(
+      selectedType: '',
+    ),
     HomeScreen(),
     AccountScreen(),
   ];

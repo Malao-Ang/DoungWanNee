@@ -7,6 +7,7 @@ import 'package:lucky_with_you/screen/randomcard_screen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
 import 'package:lucky_with_you/widgets/cardtype.dart';
 import 'package:lucky_with_you/widgets/newFeture.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/state.dart';
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
               padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-              width: double.maxFinite,
+              width: AppLayout.getScreenWidth(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -89,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            Gap(20),
+            const Gap(20),
             Center(child: NewFeatureCard()),
             Gap(25),
             Container(
@@ -100,10 +101,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (ctx) => RandomCardScreen(
-                                  selectedType: 'descriptionOfLove',
-                                )
+                        Navigator.of(context).push(PageTransition(
+                            child: RandomCardScreen(
+                              selectedType: 'descriptionOfLove',
+                            ),
+                            type: PageTransitionType.fade
                             // onToggleFavorites: onToggleFavorites,
                             ));
                         print(_selectedType);
@@ -114,11 +116,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (ctx) => RandomCardScreen(
-                                  selectedType: 'descriptionOfLuck',
-                                )
+                      onTap: () async {
+                        await Navigator.of(context).push(PageTransition(
+                            child: RandomCardScreen(
+                              selectedType: 'descriptionOfLuck',
+                            ),
+                            type: PageTransitionType.fade
                             // onToggleFavorites: onToggleFavorites,
                             ));
 
@@ -128,20 +131,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     InkWell(
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => RandomCardScreen(
-                                    selectedType: 'descriptionOfFinance',
-                                  )
+                          Navigator.of(context).push(PageTransition(
+                              child: RandomCardScreen(
+                                selectedType: 'descriptionOfFinance',
+                              ),
+                              type: PageTransitionType.fade
                               // onToggleFavorites: onToggleFavorites,
                               ));
                         },
                         child: CardCategory(title: 'Finance', assets: 'money')),
                     InkWell(
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => RandomCardScreen(
-                                    selectedType: 'descriptionOfHealth',
-                                  )
+                          Navigator.of(context).push(PageTransition(
+                              child: RandomCardScreen(
+                                selectedType: 'descriptionOfHealth',
+                              ),
+                              type: PageTransitionType.fade
                               // onToggleFavorites: onToggleFavorites,
                               ));
                           // _selectedType = 'descriptionOfHealth';
@@ -150,10 +155,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: CardCategory(title: 'Health', assets: 'health')),
                     InkWell(
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (ctx) => RandomCardScreen(
-                                    selectedType: 'descriptionOfStudy',
-                                  )
+                          Navigator.of(context).push(PageTransition(
+                              child: RandomCardScreen(
+                                selectedType: 'descriptionOfStudy',
+                              ),
+                              type: PageTransitionType.fade
                               // onToggleFavorites: onToggleFavorites,
                               ));
                           // _selectedType = 'descriptionOfStudy';

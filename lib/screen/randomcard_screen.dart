@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:lucky_with_you/data/Card.dart';
 import 'package:lucky_with_you/screen/ResultScreen.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/state.dart';
@@ -1828,13 +1829,16 @@ class RandomCardScreen extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (ctx) => ResultScreen(
-                                      result: _deckCard[_selectedCard],
-                                      typeSelected: selectedType,
-                                    )
-                                // onToggleFavorites: onToggleFavorites,
-                                ));
+                            if (selectedType.isNotEmpty) {
+                              Navigator.of(context).push(PageTransition(
+                                  child: ResultScreen(
+                                    result: _deckCard[_selectedCard],
+                                    typeSelected: selectedType,
+                                  ),
+                                  type: PageTransitionType.fade
+                                  // onToggleFavorites: onToggleFavorites,
+                                  ));
+                            }
                           },
                           child: const Positioned(
                             // submitppP (13:238)

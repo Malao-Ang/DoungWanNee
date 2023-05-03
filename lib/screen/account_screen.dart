@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:gap/gap.dart';
 import 'package:lucky_with_you/main.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
@@ -30,8 +31,35 @@ class AccountScreen extends StatelessWidget {
               ),
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white.withAlpha(200),
+                      borderRadius: BorderRadius.circular(25.0)),
+                  padding: EdgeInsets.only(
+                      top: AppLayout.getWidth(20),
+                      left: AppLayout.getWidth(15),
+                      right: AppLayout.getHight(15)),
+                  height: AppLayout.getScreenHeight() * 0.45,
+                  width: AppLayout.getScreenWidth() * 0.8,
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        TextField(
+                          textAlign: TextAlign.center,
+                        ),
+                        Gap(25),
+                        ElevatedButton(
+                          child: Text("Change Name!"),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.indigo,
+                            elevation: 0,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ]),
+                ),
                 Container(
                   // glass1DJf (50:4620)
 

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 import 'package:lucky_with_you/providers/state.dart';
 import 'package:lucky_with_you/screen/account_screen.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
@@ -17,12 +18,13 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
+  @override
   int _selectedIndex = 1;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    RandomCardScreen(
-      selectedType: '',
-    ),
+    // RandomCardScreen(
+    //   selectedType: '',
+    // ),
     HomeScreen(),
     AccountScreen(),
   ];
@@ -49,11 +51,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
             type: BottomNavigationBarType.fixed,
             unselectedItemColor: const Color(0xFF526480),
             items: const [
-              BottomNavigationBarItem(
-                icon: Icon(FluentIcons.star_12_regular),
-                activeIcon: Icon(FluentIcons.star_12_filled),
-                label: 'Predicted',
-              ),
+              // BottomNavigationBarItem(
+              //   icon: Icon(FluentIcons.star_12_regular),
+              //   activeIcon: Icon(FluentIcons.star_12_filled),
+              //   label: 'Predicted',
+              // ),
               BottomNavigationBarItem(
                   icon: Icon(FluentIcons.home_12_regular),
                   activeIcon: Icon(FluentIcons.home_12_filled),

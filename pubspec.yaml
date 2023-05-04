@@ -43,6 +43,9 @@ dependencies:
   sqflite: ^2.2.8
   home_widget: ^0.2.0+1
   page_transition: ^2.0.9
+  hive: ^2.0.4
+  hive_flutter: ^1.1.0
+  flutter_bloc: ^7.3.0
 
 
  

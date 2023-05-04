@@ -2,17 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 import 'package:lucky_with_you/main.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
+import 'package:lucky_with_you/screen/loading_screen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-class AccountScreen extends StatelessWidget {
-  final inputName = TextEditingController();
+import '../providers/state.dart';
 
+class AccountScreen extends StatefulWidget {
   AccountScreen({super.key});
+
+  @override
+  State<AccountScreen> createState() => _AccountScreenState();
+}
+
+class _AccountScreenState extends State<AccountScreen> {
+  final inputName = TextEditingController();
+  final _myBox = Hive.box('nameBox');
+
   @override
   Widget build(BuildContext context) {
+    final prediction = context.read<Prediction>();
+    var name = TextEditingController();
+
     return Scaffold(
       body: ListView(
         children: [
@@ -47,6 +63,7 @@ class AccountScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         TextField(
+                          controller: name,
                           textAlign: TextAlign.center,
                         ),
                         Gap(25),
@@ -56,7 +73,17 @@ class AccountScreen extends StatelessWidget {
                             primary: Colors.indigo,
                             elevation: 0,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            if (name.text.isNotEmpty) {
+                              context.read<Prediction>().updateData(name.text);
+                              print(name.text);
+                              Navigator.push(
+                                  context,
+                                  PageTransition(
+                                      child: LoadingScreen(),
+                                      type: PageTransitionType.fade));
+                            }
+                          },
                         ),
                       ]),
                 ),

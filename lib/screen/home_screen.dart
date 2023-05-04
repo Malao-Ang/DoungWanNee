@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
 import 'package:lucky_with_you/screen/randomcard_screen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
 import 'package:lucky_with_you/widgets/cardtype.dart';
@@ -21,6 +22,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late String _greetingMessage;
+  final _myBox = Hive.box('nameBox');
 
   @override
   void initState() {
@@ -48,14 +50,19 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final prediction = context.read<Prediction>();
+    final prediction = context.watch<Prediction>();
 
     var _selectedType = context.watch<Prediction>().typeToSee;
+    if (_myBox.get(0) == null) {
+      context.watch<Prediction>().IntialData();
+    } else {
+      context.watch<Prediction>().loadData();
+    }
 
     return Scaffold(
       body: ListView(children: [
         Container(
-          height: AppLayout.getScreenHeight(),
+          // height: AppLayout.getScreenHeight(),
           width: AppLayout.getScreenWidth(),
           decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -79,6 +86,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: GoogleFonts.libreBaskerville(
                         textStyle:
                             TextStyle(fontSize: 35, color: Colors.white)),
+                  ),
+                  Text(
+                    prediction.name,
+                    style: GoogleFonts.libreBaskerville(
+                        textStyle:
+                            TextStyle(fontSize: 25, color: Colors.white)),
                   ),
                   Gap(10),
                   Text(

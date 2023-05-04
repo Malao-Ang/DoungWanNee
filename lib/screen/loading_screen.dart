@@ -7,6 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:hive/hive.dart';
 import 'package:lucky_with_you/main.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
@@ -24,6 +25,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+
     Future.delayed(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(context,

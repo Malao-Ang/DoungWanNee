@@ -28,6 +28,11 @@ class _AccountScreenState extends State<AccountScreen> {
   Widget build(BuildContext context) {
     final prediction = context.read<Prediction>();
     var name = TextEditingController();
+    if (_myBox.get(0) == null) {
+      context.watch<Prediction>().IntialData();
+    } else {
+      context.watch<Prediction>().loadData();
+    }
 
     return Scaffold(
       body: ListView(
@@ -76,14 +81,14 @@ class _AccountScreenState extends State<AccountScreen> {
                                 InputDecoration(hintText: prediction.name)),
                         Gap(25),
                         ElevatedButton(
-                          child: Text("Submit"),
+                          child: Text("Change Your name"),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.indigo,
                             elevation: 0,
                           ),
                           onPressed: () {
                             if (name.text.isNotEmpty) {
-                              if (name.text.length > 20) {
+                              if (name.text.length < 20) {
                                 context
                                     .read<Prediction>()
                                     .updateData(name.text);

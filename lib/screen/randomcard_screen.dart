@@ -9,28 +9,47 @@ import 'package:provider/provider.dart';
 import '../providers/state.dart';
 import '../util/app_layout.dart';
 
-class RandomCardScreen extends StatelessWidget {
+class RandomCardScreen extends StatefulWidget {
   final String selectedType;
   RandomCardScreen({super.key, required this.selectedType});
 
   @override
+  State<RandomCardScreen> createState() => _RandomCardScreenState();
+}
+
+class _RandomCardScreenState extends State<RandomCardScreen> {
+  @override
   Widget build(BuildContext context) {
     final prediction = context.read<Prediction>();
-    prediction.shuffle();
-    var _deckCard = context.read<Prediction>().deckCard;
-    var _selectedCard = context.read<Prediction>().selectedIndex;
 
+    var _deckCard = context.read<Prediction>().deckCard;
+    var _selectedCard = context.watch<Prediction>().selectedIndex;
+    // _selectedCard = -1;
     var _result;
-    if (selectedType == 'descriptionOfLove')
+
+    if (widget.selectedType == 'descriptionOfLove')
       _result = _deckCard[_selectedCard].des.descriptionOfLove.toString();
-    if (selectedType == 'descriptionOfHealth')
+    if (widget.selectedType == 'descriptionOfHealth')
       _result = _deckCard[_selectedCard].des.descriptionOfHealth.toString();
-    if (selectedType == 'descriptionOfStudy')
+    if (widget.selectedType == 'descriptionOfStudy')
       _result = _deckCard[_selectedCard].des.descriptionOfStudy.toString();
-    if (selectedType == 'descriptionOfFinance')
+    if (widget.selectedType == 'descriptionOfFinance')
       _result = _deckCard[_selectedCard].des.descriptionOfFinance.toString();
-    if (selectedType == 'descriptionOfLuck')
+    if (widget.selectedType == 'descriptionOfLuck')
       _result = _deckCard[_selectedCard].des.descriptionOfToDay.toString();
+
+    void _selectImage(int index) {
+      for (int i = 0; i < _deckCard.length; i++) {
+        setState(() {
+          if (i == index) {
+            _deckCard[i].isSelected = true;
+            _selectedCard = index;
+          } else {
+            _deckCard[i].isSelected = false;
+          }
+        });
+      }
+    }
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -90,196 +109,34 @@ class RandomCardScreen extends StatelessWidget {
                             height: 84,
                             child: Stack(
                               children: [
-                                Positioned(
-                                  // card1zZM (56:340)
-                                  left: 0,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 1;
-                                            print(_result);
-                                            print(
-                                                _deckCard[_selectedCard].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
+                                for (int i = 0; i < 9; i++)
+                                  Positioned(
+                                    // card1zZM (56:340)
+                                    left: 0.0 + (AppLayout.getWidth(27.5) * i),
+                                    top: 0,
+                                    child: Align(
+                                      child: SizedBox(
+                                          width: 56,
+                                          height: 84,
+                                          child: GestureDetector(
+                                              onTap: () {
+                                                _selectImage(i);
+
+                                                print(_deckCard[i].name);
+                                                // print(_deckCard[i].isSelected);
+                                                if (_deckCard[i].isSelected) {
+                                                  print("black");
+                                                }
+                                              },
+                                              child: Image.asset(
+                                                'assets/card.png',
+                                                fit: BoxFit.cover,
+                                                color: _deckCard[i].isSelected
+                                                    ? Colors.black
+                                                    : null,
+                                              ))),
+                                    ),
                                   ),
-                                ),
-                                Positioned(
-                                  // card2WGo (56:341)
-                                  left: 28,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 2;
-                                            print(_result);
-                                            print(_deckCard[2].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
-                                Positioned(
-                                  // card3qK5 (56:342)
-                                  left: 56,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 3;
-                                            print(_result);
-                                            print(_deckCard[3].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
-                                Positioned(
-                                  // card4xeb (56:343)
-                                  left: 84,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 4;
-                                            print(_result);
-                                            print(_deckCard[4].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
-                                Positioned(
-                                  // card5gKh (56:344)
-                                  left: 112,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 5;
-                                            print(_result);
-                                            print(_deckCard[5].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
-                                Positioned(
-                                  // card6cDM (56:345)
-                                  left: 140,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 6;
-                                            print(_result);
-                                            print(_deckCard[6].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
-                                Positioned(
-                                  // card7wWX (56:346)
-                                  left: 168,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 7;
-                                            print(_result);
-                                            print(_deckCard[7].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
-                                Positioned(
-                                  // card8sf5 (56:347)
-                                  left: 196,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 8;
-                                            print(_result);
-                                            print(_deckCard[8].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
-                                Positioned(
-                                  // card9CBZ (56:348)
-                                  left: 224,
-                                  top: 0,
-                                  child: Align(
-                                    child: SizedBox(
-                                        width: 56,
-                                        height: 84,
-                                        child: InkWell(
-                                          onTap: () {
-                                            _selectedCard = 9;
-                                            print(_result);
-                                            print(_deckCard[9].name);
-                                          },
-                                          child: Image.asset(
-                                            'assets/card.png',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        )),
-                                  ),
-                                ),
                               ],
                             ),
                           ),
@@ -1829,11 +1686,12 @@ class RandomCardScreen extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            if (selectedType.isNotEmpty) {
+                            if (widget.selectedType.isNotEmpty) {
+                              prediction.shuffle();
                               Navigator.of(context).push(PageTransition(
                                   child: ResultScreen(
                                     result: _deckCard[_selectedCard],
-                                    typeSelected: selectedType,
+                                    typeSelected: widget.selectedType,
                                   ),
                                   type: PageTransitionType.fade
                                   // onToggleFavorites: onToggleFavorites,

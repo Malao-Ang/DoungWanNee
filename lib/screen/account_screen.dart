@@ -62,26 +62,38 @@ class _AccountScreenState extends State<AccountScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        TextField(
-                          controller: name,
-                          textAlign: TextAlign.center,
+                        Text(
+                          "Change Your name",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
                         ),
                         Gap(25),
+                        TextField(
+                            controller: name,
+                            textAlign: TextAlign.center,
+                            decoration:
+                                InputDecoration(hintText: prediction.name)),
+                        Gap(25),
                         ElevatedButton(
-                          child: Text("Change Name!"),
+                          child: Text("Submit"),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.indigo,
                             elevation: 0,
                           ),
                           onPressed: () {
                             if (name.text.isNotEmpty) {
-                              context.read<Prediction>().updateData(name.text);
-                              print(name.text);
-                              Navigator.push(
-                                  context,
-                                  PageTransition(
-                                      child: LoadingScreen(),
-                                      type: PageTransitionType.fade));
+                              if (name.text.length > 20) {
+                                context
+                                    .read<Prediction>()
+                                    .updateData(name.text);
+                                print(name.text);
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        child: LoadingScreen(),
+                                        type: PageTransitionType.fade));
+                              }
                             }
                           },
                         ),

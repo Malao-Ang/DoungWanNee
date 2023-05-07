@@ -64,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Container(
           padding: EdgeInsets.only(bottom: 25),
           width: AppLayout.getScreenWidth(),
+          height: AppLayout.getScreenHeight(),
           decoration: const BoxDecoration(
               gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -100,10 +101,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         textStyle:
                             TextStyle(fontSize: 20, color: Colors.white)),
                   ),
+                  // Gap(25),
                 ],
               ),
             ),
-            const Gap(25),
+            // Center(child: NewFeatureCard()),
+            Gap(AppLayout.getHight(30)),
             Padding(
               padding: const EdgeInsets.only(left: 25),
               child: Text(
@@ -192,8 +195,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            Gap(20),
-            Center(child: NewFeatureCard()),
           ]),
         ),
       ]),

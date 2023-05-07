@@ -93,7 +93,7 @@ class AboutUsScreen extends StatelessWidget {
                   // group1Mmr (66:101)
                   padding: EdgeInsets.fromLTRB(15, 30, 15, 97),
                   width: AppLayout.getScreenWidth() * 0.8,
-                  height: 350,
+                  height: AppLayout.getScreenHeight() * 0.55,
                   decoration: BoxDecoration(
                     color: Color(0xffffffff),
                     borderRadius: BorderRadius.circular(65),

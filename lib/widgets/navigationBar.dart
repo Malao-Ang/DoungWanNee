@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:lucky_with_you/providers/state.dart';
+import 'package:lucky_with_you/screen/AboutUsScreen.dart';
 import 'package:lucky_with_you/screen/account_screen.dart';
 import 'package:lucky_with_you/screen/home_screen.dart';
 import 'package:lucky_with_you/screen/randomcard_screen.dart';
@@ -19,13 +20,16 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   @override
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
 
   static final List<Widget> _widgetOptions = <Widget>[
     // RandomCardScreen(
     //   selectedType: '',
     // ),
+
+    AboutUsScreen(),
     HomeScreen(),
+
     AccountScreen(),
   ];
   void _onItemTapped(int index) {
@@ -56,6 +60,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
               //   activeIcon: Icon(FluentIcons.star_12_filled),
               //   label: 'Predicted',
               // ),
+
+              BottomNavigationBarItem(
+                  icon: Icon(FluentIcons.mail_20_regular),
+                  activeIcon: Icon(FluentIcons.mail_20_filled),
+                  label: 'AboutUs'),
               BottomNavigationBarItem(
                   icon: Icon(FluentIcons.home_12_regular),
                   activeIcon: Icon(FluentIcons.home_12_filled),

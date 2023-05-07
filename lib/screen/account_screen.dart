@@ -24,7 +24,7 @@ class AccountScreen extends StatefulWidget {
 class _AccountScreenState extends State<AccountScreen> {
   final inputName = TextEditingController();
   final _myBox = Hive.box('nameBox');
-
+  var showError = false;
   @override
   Widget build(BuildContext context) {
     final prediction = context.read<Prediction>();
@@ -78,8 +78,11 @@ class _AccountScreenState extends State<AccountScreen> {
                       TextField(
                           controller: name,
                           textAlign: TextAlign.center,
-                          decoration:
-                              InputDecoration(hintText: prediction.name)),
+                          decoration: InputDecoration(
+                              hintText: prediction.name,
+                              errorText: showError == true
+                                  ? 'กรุณากรอกข้อมมูลตัวอักษรไม่เกิน 20 ตัว'
+                                  : null)),
                       Gap(25),
                       ElevatedButton(
                         child: Text("Change Your Name"),
@@ -89,18 +92,21 @@ class _AccountScreenState extends State<AccountScreen> {
                             // side: BorderSide(color: Colors.black, width: 2),
                             shadowColor: Color.fromRGBO(255, 85, 187, 1),
                             shape: StadiumBorder()),
-                        onPressed: () {
+                        onPressed: () async {
                           if (name.text.isNotEmpty) {
                             if (name.text.length < 20) {
                               context.read<Prediction>().updateData(name.text);
                               print(name.text);
-                              Navigator.push(
+                              await Navigator.push(
                                   context,
                                   PageTransition(
                                       child: LoadingScreen(),
                                       type: PageTransitionType.fade));
+                              showError = false;
                             }
+                            showError = true;
                           }
+                          showError = true;
                         },
                       ),
                       Gap(AppLayout.getHight(20)),

@@ -78,7 +78,7 @@ class _NewFeatureCardState extends State<NewFeatureCard> {
                 width: 238,
                 height: 102,
                 child: GestureDetector(
-                  onTap: () => Navigator.push(
+                  onTap: () async => await Navigator.push(
                       context,
                       PageTransition(
                           child: const AboutUsScreen(),
@@ -100,7 +100,7 @@ class _NewFeatureCardState extends State<NewFeatureCard> {
                       Container(
                         // nowyoucansettarocardinyourwidg (13:418)
                         // margin: EdgeInsets.only(bottom: 10),
-                        constraints: BoxConstraints(
+                        constraints: const BoxConstraints(
                           maxWidth: 143,
                         ),
                         child: Text(

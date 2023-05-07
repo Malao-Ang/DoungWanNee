@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
 import 'package:lucky_with_you/screen/AboutUsScreen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
+import 'package:page_transition/page_transition.dart';
 
 class NewFeatureCard extends StatefulWidget {
   const NewFeatureCard({super.key});
@@ -79,8 +80,9 @@ class _NewFeatureCardState extends State<NewFeatureCard> {
                 child: GestureDetector(
                   onTap: () => Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const AboutUsScreen())),
+                      PageTransition(
+                          child: const AboutUsScreen(),
+                          type: PageTransitionType.fade)),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [

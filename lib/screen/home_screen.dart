@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.only(left: 25),
               child: Text(
-                "Click to select what you want to know...",
+                "Select the Topic that you want to know...",
                 style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,

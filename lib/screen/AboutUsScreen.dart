@@ -60,7 +60,20 @@ class AboutUsScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Center(
+                      const Center(
+                        // kaewmaneemarasriFTv (66:99)
+                        child: Text(
+                          'Developer',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                            height: 1.5125,
+                            color: Color(0xffffffff),
+                          ),
+                        ),
+                      ),
+                      const Center(
                         // kaewmaneemarasriFTv (66:99)
                         child: Text(
                           'Kaewmanee Marasri',
@@ -78,9 +91,9 @@ class AboutUsScreen extends StatelessWidget {
                 ),
                 Container(
                   // group1Mmr (66:101)
-                  padding: EdgeInsets.fromLTRB(15, 25, 15, 97),
+                  padding: EdgeInsets.fromLTRB(15, 30, 15, 97),
                   width: AppLayout.getScreenWidth() * 0.8,
-                  height: 400,
+                  height: 350,
                   decoration: BoxDecoration(
                     color: Color(0xffffffff),
                     borderRadius: BorderRadius.circular(65),

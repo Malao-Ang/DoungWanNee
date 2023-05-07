@@ -481,81 +481,52 @@ class _RandomCardScreenState extends State<RandomCardScreen> {
                       ],
                     ),
                   ),
-                  Container(
-                    // buttonSJ3 (13:240)
-                    width: AppLayout.getScreenWidth(),
-                    height: 73,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(107),
-                    ),
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          // rectangle10BFd (13:237)
-                          left: 6,
-                          top: 8,
-                          child: Align(
-                            child: SizedBox(
-                              width: 278,
-                              height: 52,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(107),
-                                  gradient: LinearGradient(
-                                    begin: Alignment(-0.734, 0),
-                                    end: Alignment(0.856, -1.673),
-                                    colors: <Color>[
-                                      Color(0xffade4db),
-                                      Color(0xd6a6d3ff)
-                                    ],
-                                    stops: <double>[0, 1],
-                                  ),
+                  Center(
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.transparent,
+                            elevation: 10,
+                            // side: BorderSide(color: Colors.black, width: 2),
+                            shadowColor: Color(0xd6a6d3ff),
+                            shape: StadiumBorder()
+                            // shadowColor: Colors.transparent,
+                            //make color or elevated button transparent
+                            ),
+                        onPressed: () async {
+                          if (widget.selectedType.isNotEmpty) {
+                            prediction.shuffle();
+                            await Navigator.of(context).push(PageTransition(
+                                child: ResultScreen(
+                                  result: _deckCard[_selectedCard],
+                                  typeSelected: widget.selectedType,
                                 ),
-                              ),
+                                type: PageTransitionType.fade
+                                // onToggleFavorites: onToggleFavorites,
+                                ));
+                          }
+                        },
+                        child: Container(
+                          width: AppLayout.getWidth(278),
+                          height: AppLayout.getHight(52),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(107),
+                              gradient: const LinearGradient(
+                                begin: Alignment(-0.734, 0),
+                                end: Alignment(0.856, -1.673),
+                                colors: <Color>[
+                                  Color(0xffade4db),
+                                  Color(0xd6a6d3ff)
+                                ],
+                                stops: <double>[0, 1],
+                              )),
+                          child: Center(
+                            child: Text(
+                              "Submit",
+                              style: TextStyle(fontSize: 30),
                             ),
                           ),
-                        ),
-                        InkWell(
-                          onTap: () async {
-                            if (widget.selectedType.isNotEmpty) {
-                              prediction.shuffle();
-                              await Navigator.of(context).push(PageTransition(
-                                  child: ResultScreen(
-                                    result: _deckCard[_selectedCard],
-                                    typeSelected: widget.selectedType,
-                                  ),
-                                  type: PageTransitionType.fade
-                                  // onToggleFavorites: onToggleFavorites,
-                                  ));
-                            }
-                          },
-                          child: const Positioned(
-                            // submitppP (13:238)
-                            left: 100.5,
-                            top: 5.5,
-                            child: Center(
-                              child: Align(
-                                child: SizedBox(
-                                  width: 100,
-                                  height: 40,
-                                  child: Text(
-                                    'SUBMIT',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w400,
-                                      height: 2.0525,
-                                      color: Color(0xffffffff),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                        )),
+                  )
                 ],
               ),
             ),

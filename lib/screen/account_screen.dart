@@ -62,7 +62,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       top: AppLayout.getWidth(20),
                       left: AppLayout.getWidth(15),
                       right: AppLayout.getHight(15)),
-                  height: AppLayout.getScreenHeight() * 0.8,
+                  height: AppLayout.getScreenHeight() * 0.45,
                   width: AppLayout.getScreenWidth() * 0.8,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -104,16 +104,16 @@ class _AccountScreenState extends State<AccountScreen> {
                         },
                       ),
                       Gap(AppLayout.getHight(20)),
-                      SizedBox(
-                        height: 250,
-                        child: Image.asset(
-                          'assets/glass.png',
-                          fit: BoxFit.cover,
-                        ),
-                      )
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 250,
+                  child: Image.asset(
+                    'assets/glass.png',
+                    fit: BoxFit.cover,
+                  ),
+                )
               ],
             ),
           ),

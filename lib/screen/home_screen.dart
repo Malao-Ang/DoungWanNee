@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: ListView(children: [
         Container(
-          // height: AppLayout.getScreenHeight(),
+          padding: EdgeInsets.only(bottom: 25),
           width: AppLayout.getScreenWidth(),
           decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -103,8 +103,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            const Gap(20),
-            Center(child: NewFeatureCard()),
+            const Gap(25),
+            Padding(
+              padding: const EdgeInsets.only(left: 25),
+              child: Text(
+                "Click to select what you want to know...",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white),
+              ),
+            ),
             Gap(25),
             Container(
               child: SingleChildScrollView(
@@ -182,7 +191,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-            )
+            ),
+            Center(child: NewFeatureCard()),
           ]),
         ),
       ]),

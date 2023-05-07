@@ -46,6 +46,7 @@ dependencies:
   hive: ^2.0.4
   hive_flutter: ^1.1.0
   flutter_bloc: ^7.3.0
+  drop_shadow_image: ^0.9.1
 
 
  

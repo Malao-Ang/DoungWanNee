@@ -1,3 +1,4 @@
+import 'package:drop_shadow_image/drop_shadow_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -35,10 +36,12 @@ class CardCategory extends StatelessWidget {
                       height: 204,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(75),
-                        child: Image.asset(
-                          'assets/${assets}.png',
-                          fit: BoxFit.cover,
-                          height: 100,
+                        child: DropShadowImage(
+                          image: Image.asset(
+                            'assets/${assets}.png',
+                            fit: BoxFit.cover,
+                            height: 180,
+                          ),
                         ),
                       ),
                     ),

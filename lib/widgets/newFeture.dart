@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
+import 'package:lucky_with_you/screen/AboutUsScreen.dart';
 import 'package:lucky_with_you/util/app_layout.dart';
 
 class NewFeatureCard extends StatefulWidget {
@@ -20,7 +21,7 @@ class _NewFeatureCardState extends State<NewFeatureCard> {
       top: 230,
       child: Container(
         width: 369,
-        height: 172,
+        height: 200,
         child: Stack(
           children: [
             Positioned(
@@ -45,7 +46,7 @@ class _NewFeatureCardState extends State<NewFeatureCard> {
               left: 0,
               top: 0,
               child: Container(
-                width: 90,
+                width: 150,
                 height: 38,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(85.5),
@@ -59,7 +60,7 @@ class _NewFeatureCardState extends State<NewFeatureCard> {
                 child: Center(
                   child: Container(
                     padding: EdgeInsets.all(8.0),
-                    child: Text('NEW\n',
+                    child: Text('About US\n',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
@@ -75,35 +76,42 @@ class _NewFeatureCardState extends State<NewFeatureCard> {
               child: Container(
                 width: 238,
                 height: 102,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Container(
-                      // Y8f (13:417)
-                      margin: EdgeInsets.fromLTRB(0, 0, 36, 1),
-                      width: 59,
-                      height: 101,
-                      child: Image.asset(
-                        'assets/emp.jpg',
-                        height: AppLayout.getHight(100),
+                child: GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AboutUsScreen())),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        // Y8f (13:417)
+                        margin: EdgeInsets.fromLTRB(0, 0, 36, 1),
+                        width: 59,
+                        height: 250,
+                        child: Image.asset(
+                          'assets/woman.png',
+                          height: AppLayout.getHight(250),
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    Container(
-                      // nowyoucansettarocardinyourwidg (13:418)
-                      // margin: EdgeInsets.only(bottom: 10),
-                      constraints: BoxConstraints(
-                        maxWidth: 143,
+                      Container(
+                        // nowyoucansettarocardinyourwidg (13:418)
+                        // margin: EdgeInsets.only(bottom: 10),
+                        constraints: BoxConstraints(
+                          maxWidth: 143,
+                        ),
+                        child: Text(
+                          'Click to come in and get to know us. !!',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                              height: 1.615,
+                              color: Color(0xff000000)),
+                        ),
                       ),
-                      child: Text(
-                        'Now you can set Taro card in your widgets !!',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w400,
-                            height: 1.615,
-                            color: Color(0xff000000)),
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:drop_shadow_image/drop_shadow_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -39,7 +40,7 @@ class _AccountScreenState extends State<AccountScreen> {
         children: [
           Container(
             // iphone141dR1 (13:393)
-            padding: EdgeInsets.only(top: 50, left: 15, right: 15),
+            padding: EdgeInsets.only(top: 20, left: 15, right: 15),
             height: AppLayout.getScreenHeight(),
             // padding: EdgeInsets.fromLTRB(17, 50, 18, 152),
             width: double.infinity,
@@ -61,57 +62,56 @@ class _AccountScreenState extends State<AccountScreen> {
                       top: AppLayout.getWidth(20),
                       left: AppLayout.getWidth(15),
                       right: AppLayout.getHight(15)),
-                  height: AppLayout.getScreenHeight() * 0.45,
+                  height: AppLayout.getScreenHeight() * 0.8,
                   width: AppLayout.getScreenWidth() * 0.8,
                   child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Change Your name",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
-                        Gap(25),
-                        TextField(
-                            controller: name,
-                            textAlign: TextAlign.center,
-                            decoration:
-                                InputDecoration(hintText: prediction.name)),
-                        Gap(25),
-                        ElevatedButton(
-                          child: Text("Change Your name"),
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.indigo,
-                            elevation: 0,
-                          ),
-                          onPressed: () {
-                            if (name.text.isNotEmpty) {
-                              if (name.text.length < 20) {
-                                context
-                                    .read<Prediction>()
-                                    .updateData(name.text);
-                                print(name.text);
-                                Navigator.push(
-                                    context,
-                                    PageTransition(
-                                        child: LoadingScreen(),
-                                        type: PageTransitionType.fade));
-                              }
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Change Your name",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                      Gap(25),
+                      TextField(
+                          controller: name,
+                          textAlign: TextAlign.center,
+                          decoration:
+                              InputDecoration(hintText: prediction.name)),
+                      Gap(25),
+                      ElevatedButton(
+                        child: Text("Change Your Name"),
+                        style: ElevatedButton.styleFrom(
+                            primary: Color.fromRGBO(255, 85, 187, 1),
+                            elevation: 10,
+                            // side: BorderSide(color: Colors.black, width: 2),
+                            shadowColor: Color.fromRGBO(255, 85, 187, 1),
+                            shape: StadiumBorder()),
+                        onPressed: () {
+                          if (name.text.isNotEmpty) {
+                            if (name.text.length < 20) {
+                              context.read<Prediction>().updateData(name.text);
+                              print(name.text);
+                              Navigator.push(
+                                  context,
+                                  PageTransition(
+                                      child: LoadingScreen(),
+                                      type: PageTransitionType.fade));
                             }
-                          },
+                          }
+                        },
+                      ),
+                      Gap(AppLayout.getHight(20)),
+                      SizedBox(
+                        height: 250,
+                        child: Image.asset(
+                          'assets/glass.png',
+                          fit: BoxFit.cover,
                         ),
-                      ]),
-                ),
-                Container(
-                  // glass1DJf (50:4620)
-
-                  height: 250,
-                  // width: AppLayout.getWidth(118),
-                  child: Image.asset(
-                    'assets/glass.png',
-                    fit: BoxFit.cover,
+                      )
+                    ],
                   ),
                 ),
               ],

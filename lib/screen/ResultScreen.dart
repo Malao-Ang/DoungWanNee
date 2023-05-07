@@ -64,52 +64,18 @@ class ResultScreen extends StatelessWidget {
                     // titleHmy (13:333)
                     margin: EdgeInsets.fromLTRB(41.5, 0, 53.5, 0),
                     width: double.infinity,
-                    height: AppLayout.getScreenHeight() * 0.12,
+                    height: AppLayout.getScreenHeight() * 0.10,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(107),
-                    ),
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          // rectangle10zgP (13:334)
-                          left: 7.3500061035,
-                          top: 0,
-                          child: Align(
-                            child: SizedBox(
-                              width: 227.03,
-                              height: 70,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(107),
-                                  border: Border.all(color: Color(0xffffffff)),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          // thesunVd9 (13:332)
-                          left: 76.5,
-                          top: 15,
-                          child: Center(
-                            child: Align(
-                              child: SizedBox(
-                                child: Text(
-                                  result.name,
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontSize: AppLayout.getHight(20),
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.0975,
-                                    color: Color(0xffffffff),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                        borderRadius: BorderRadius.circular(107),
+                        border: Border.all(color: Colors.white, width: 2)),
+                    child: Center(
+                        child: Text(
+                      result.name,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500),
+                    )),
                   ),
                   Container(
                     // theresultJ4o (13:366)
